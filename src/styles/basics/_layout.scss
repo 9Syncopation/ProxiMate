@@ -1,0 +1,30 @@
+.main-header {
+  background-color: $clr2;
+  height: 6vh;
+  padding: 10px ;
+}
+.logo-container {
+  
+    font-family: $logoFont;
+    color: $clr7;
+    font-size: 1.5rem;
+    padding-bottom: 5px;
+  
+}
+.logo-icon {
+  transition: 0.5s;
+  color: white;
+  height: 35px;
+  width: 35px;
+//   margin: 5px;
+}
+.navBar{
+    width: 50px;
+    background-color: $clr6;
+    padding: 5px;
+    height: 95vh;
+}
+.main-router-view {
+}
+.main-footer {
+}
