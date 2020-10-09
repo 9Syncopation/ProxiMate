@@ -1,15 +1,44 @@
 import React from "react";
-import { GoHome, GoStar, GoTag, GoIssueOpened } from "react-icons/go";
+import {
+  GoHome,
+  GoStar,
+  GoTag,
+  GoIssueOpened,
+  GoCalendar,
+  GoFlame,
+} from "react-icons/go";
+import { NavLink } from "react-router-dom";
 
-export default function NavBar() {
-      // scss layout file
+export default function SideNavBar() {
+  // scss layout file
 
   return (
-    <div className='navBar flex column'>
-      <GoHome className='nav-icon'/>
-      <GoStar className='nav-icon'/>
-      <GoTag className='nav-icon'/>
-      <GoIssueOpened className='nav-icon' />
+    <div className="sideNavBar flex column">
+      <NavLink to="/" className=" flex align-center ">
+        <GoHome className="nav-icon" />
+        <span className="nav-icon-text"> Home </span>
+      </NavLink>
+
+      <NavLink to="/login" className=" flex align-center ">
+        <GoStar className="nav-icon" />
+        <span className="nav-icon-text"> Login </span>
+      </NavLink>
+      <NavLink to="rent" className=" flex align-center ">
+        <GoTag className="nav-icon" />
+        <span className="nav-icon-text"> For Rent </span>
+      </NavLink>
+      <NavLink to="services" className=" flex align-center ">
+        <GoIssueOpened className="nav-icon" />
+        <span className="nav-icon-text"> Local Services </span>
+      </NavLink>
+      <NavLink to="trends" className=" flex align-center ">
+        <GoFlame className="nav-icon" />
+        <span className="nav-icon-text"> Trends </span>
+      </NavLink>
+      <NavLink to="calendar" className=" flex align-center ">
+        <GoCalendar className="nav-icon" />
+        <span className="nav-icon-text"> calendar </span>
+      </NavLink>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Trends() {
     return (
-        <div>
+        <div className="flex justify-center">
             special Trends
         </div>
     )

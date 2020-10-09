@@ -1,10 +1,9 @@
 import React from 'react'
 
-export default function Rent() {
-    console.log('rendt')
+export default function NotFound() {
     return (
         <div className="flex justify-center">
-            for Rent
+            "there is nothing here for you"
         </div>
     )
 }
