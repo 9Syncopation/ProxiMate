@@ -15,18 +15,18 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div className="flex row">
-      <Router>
-      <SideNavBar />
-      <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/login" component={Login} />
-      <Route path="/rent" component={Rent} />
-      <Route path="/services" component={Services} />
-      <Route path="/trends" component={Trends} />
-      <Route component={NotFound} />
-      </Switch>
-      </Router>
+      <div className="flex row ">
+        <Router>
+          <SideNavBar />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/login" component={Login} />
+            <Route path="/rent" component={Rent} />
+            <Route path="/services" component={Services} />
+            <Route path="/trends" component={Trends} />
+            <Route component={NotFound} />
+          </Switch>
+        </Router>
       </div>
     </div>
   );

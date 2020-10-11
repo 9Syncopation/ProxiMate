@@ -4,6 +4,7 @@
 body{
     margin: 0;
     // font-family: martel;
+    background-color: $clr1;
 }
 
 h1,h2,h3,h4,h5,h6,p{
@@ -21,6 +22,9 @@ a{
 }
 a:hover{
 
+}
+a:visited{
+    color: $clr7;
 }
 img{}
 

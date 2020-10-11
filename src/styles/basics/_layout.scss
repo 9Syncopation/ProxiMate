@@ -1,18 +1,20 @@
 .main-header {
-  background-color: $clr2;
-  height: 6vh;
+  background-color: $clr5;
+  height: 55px;
   padding: 10px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
+
 }
 .logo-container {
   font-family: $logoFont;
-  color: $clr7;
+  color: $clr8;
   font-size: 1.5rem;
   padding-bottom: 5px;
   margin-left: 50px;
 }
 .logo-icon {
   transition: 0.5s;
-  color: white;
+  color: $clr4;
   height: 35px;
   width: 35px;
   //   margin: 5px;
@@ -24,6 +26,8 @@
   height: 90vh;
   margin-right: 10px;
 //   position: fixed;
+box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
+
 }
 .nav-icon {
   width: 35px;
