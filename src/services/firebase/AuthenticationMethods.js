@@ -3,13 +3,20 @@ import firebaseConfig from "./firebaseIndex";
 
 // console.log(auth)
 export const authMethods = {
-  signup: (email, password, setErrors) => {
+  signup: (email, password, setErrors , setToken) => {
     console.log("signup");
     // debugger
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
-      .then((res) => {
+    //   async to grab the token before saving
+      .then(async res => {
+          const token = await Object.entries(res.user)[5][1].b
+        //   set to local storage
+        await localStorage.setItem('token',token)
+        // grab from local storage and set to state
+        setToken(window.localStorage.token)
+        console.log('token', token)
         console.log(res, "this is res");
       })
       .catch((err) => {

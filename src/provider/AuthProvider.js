@@ -12,8 +12,8 @@ export default function AuthProvider(props) {
     // middle man between firebase and signup
     console.log("sginup provider");
     // calling signup from firebase server
-    authMethods.signup(inputs.email, inputs.password, setErrors);
-    console.log(errors);
+    authMethods.signup(inputs.email, inputs.password, setErrors, setToken);
+    console.log(errors, token);
   };
   return (
     <firebaseAuth.Provider
