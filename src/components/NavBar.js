@@ -23,6 +23,10 @@ export default function SideNavBar() {
         <GoStar className="nav-icon" />
         <span className="nav-icon-text"> Login </span>
       </NavLink>
+      <NavLink to="/signup" className=" flex align-center ">
+        <GoStar className="nav-icon" />
+        <span className="nav-icon-text"> Signup </span>
+      </NavLink>
       <NavLink to="rent" className=" flex align-center ">
         <GoTag className="nav-icon" />
         <span className="nav-icon-text"> For Rent </span>

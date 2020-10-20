@@ -1,5 +1,6 @@
 .main-header {
-  background-color: $clr5;
+  // background-color: $clr5;
+  background-color: transparent;
   height: 55px;
   padding: 10px;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
@@ -21,7 +22,8 @@
 }
 .sideNavBar {
   width: 150px;
-  background-color: $clr6;
+  background-color: transparent;
+  // background-color: $clr6;
   padding: 5px;
   height: 90vh;
   margin-right: 10px;
