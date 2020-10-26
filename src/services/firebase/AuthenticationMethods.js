@@ -51,7 +51,7 @@ export const authMethods = {
       .signOut()
       .then((res) => {
         //remove the token
-        localStorage.removeItem("token");
+        localStorage.removeItem('token');
         //set token to state
         setToken(null);
         console.log("signed out succefully");

@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { firebaseAuth } from "../provider/AuthProvider";
-import { withRouter } from "react-router-dom";
 
 export default function Login() {
   console.log("login");

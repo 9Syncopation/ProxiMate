@@ -25,6 +25,7 @@ function App() {
       <div className="flex row ">
         <Router>
           <SideNavBar />
+
           <Switch>
             <Route
               path="/"
