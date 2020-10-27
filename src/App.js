@@ -11,12 +11,13 @@ import Rent from "./pages/Rent";
 import Services from "./pages/Services";
 import Trends from "./pages/Trends";
 import NotFound from "./pages/NotFound";
+import PrivateRoute from "./PrivateRoute"
 // import Routes from "./routes";
 import "./styles/global.scss";
 
 function App() {
-  const { token } = useContext(firebaseAuth);
-  console.log(token);
+  // const { token } = useContext(firebaseAuth);
+  // console.log(token);
   // const {handleSignup } = useContext(firebaseAuth)
   // console.log (handleSignup)
   return (
@@ -27,21 +28,24 @@ function App() {
           <SideNavBar />
 
           <Switch>
-            <Route
-              path="/"
-              exact
-              render={(rProps) =>
-                token === null ? <Login /> : <UserProfile />
-              }
-              // component={Home}
-            />
+          <Route exact path ="/" component={Home}/>
+            { 
+            //   <Route
+            //   path="/"
+            //   exact
+            //   render={(rProps) =>
+            //     token === null ? <Login /> : <UserProfile />
+            //   }
+            //   // component={Home}
+            // />
+            }
 
             <Route path="/login" component={Login} />
             <Route path="/signup" component={Signup} />
-            <Route path="/userprofile" component={UserProfile} />
-            <Route path="/rent" component={Rent} />
-            <Route path="/services" component={Services} />
-            <Route path="/trends" component={Trends} />
+            <PrivateRoute path="/userprofile" component={UserProfile} />
+            <PrivateRoute path="/rent" component={Rent} />
+            <PrivateRoute path="/services" component={Services} />
+            <PrivateRoute path="/trends" component={Trends} />
             <Route component={NotFound} />
           </Switch>
         </Router>

@@ -1,6 +1,7 @@
 import React from "react";
 import {
   GoHome,
+  GoPerson,
   GoStar,
   GoTag,
   GoIssueOpened,
@@ -17,6 +18,10 @@ export default function SideNavBar() {
       <NavLink to="/" className=" flex align-center ">
         <GoHome className="nav-icon" />
         <span className="nav-icon-text"> Home </span>
+      </NavLink>
+      <NavLink to="/userProfile" className=" flex align-center ">
+        <GoPerson className="nav-icon" />
+        <span className="nav-icon-text"> UserPage </span>
       </NavLink>
 
       <NavLink to="/login" className=" flex align-center ">

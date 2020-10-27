@@ -8,7 +8,7 @@ const Signup = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("handle submit signup componenet");
+    console.log("handle  signup componenet");
     await handleSignup();
     props.history.push("/");
   };

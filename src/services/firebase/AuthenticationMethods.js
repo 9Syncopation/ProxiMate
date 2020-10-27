@@ -17,7 +17,7 @@ export const authMethods = {
         // grab from local storage and set to state
         setToken(window.localStorage.token);
         console.log("token", token);
-        console.log(res, "this is res");
+        console.log(res, "this is SIGNUP res");
       })
       .catch((err) => {
         console.log("error>>>", err);
@@ -37,7 +37,7 @@ export const authMethods = {
         // grab from local storage and set to state
         setToken(window.localStorage.token);
         console.log("token", token);
-        console.log(res, "this is login res");
+        console.log(res, "this is LOGIN res");
       })
       .catch((err) => {
         console.log("error>>>", err);
@@ -51,7 +51,7 @@ export const authMethods = {
       .signOut()
       .then((res) => {
         //remove the token
-        localStorage.removeItem('token');
+        localStorage.removeItem("token");
         //set token to state
         setToken(null);
         console.log("signed out succefully");

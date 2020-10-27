@@ -15,11 +15,11 @@ export default function AuthProvider(props) {
     authMethods.signup(inputs.email, inputs.password, setErrors, setToken);
     console.log(errors, token);
   };
-  const handleLogin = () => {
+  const handleLogin = async () => {
     // middle man between firebase and signup
     console.log("LOGIN provider");
     // calling signup from firebase server
-    authMethods.login(inputs.email, inputs.password, setErrors, setToken);
+    await authMethods.login(inputs.email, inputs.password, setErrors, setToken);
     console.log(errors, token);
   };
   const handleSignout = () => {

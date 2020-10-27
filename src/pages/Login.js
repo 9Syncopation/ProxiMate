@@ -1,14 +1,17 @@
 import React, { useContext } from "react";
 import { firebaseAuth } from "../provider/AuthProvider";
+import { withRouter } from "react-router-dom";
 
-export default function Login() {
+const Login = (props) => {
   console.log("login");
   const { handleLogin, inputs, setInputs, errors } = useContext(firebaseAuth);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
+    // debugger
     e.preventDefault();
-    console.log("handleSubmit");
-    handleLogin();
+    console.log("handlelogin");
+    await handleLogin();
+    props.history.push("/userProfile");
   };
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -37,4 +40,6 @@ export default function Login() {
         : null}
     </form>
   );
-}
+};
+
+export default withRouter(Login);
